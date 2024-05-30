@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainPage from "./views/main";
+import View from "./views";
 
 export default function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<View />} />
         </Routes>
       </BrowserRouter>
     </div>
