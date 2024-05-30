@@ -25,6 +25,7 @@ export default function Kakaomap() {
         new window.kakao.maps.Marker({
           position: options.center,
         }).setMap(new window.kakao.maps.Map(container, options));
+        // 마커 추가 후추수정
         // const marker = new window.kakao.maps.Marker({
         //   position: options.center,
         // });
