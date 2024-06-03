@@ -41,11 +41,11 @@ export default function Kakaomap() {
         //   position: options.center,
         // });
 
-        const infowindow = new kakao.maps.InfoWindow({
-          position: options.center,
-          content:
-            '<div style="padding:5px; ">Sandburg Office<br/>ITS Space</div>',
-        });
+        // const infowindow = new kakao.maps.InfoWindow({
+        //   position: options.center,
+        //   content:
+        //     '<div style="padding:5px; ">Sandburg Office<br/>ITS Space</div>',
+        // });
         // marker.setMap(map);
         // infowindow.open(map, marker);
       });

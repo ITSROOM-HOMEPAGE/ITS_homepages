@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import MainPage from "./main/main";
 import PageHeader from "../layouts/pageHeader";
 import Pagefooter from "../layouts/pageFooter";
+import { FloatButton } from "antd";
 
 export default function View() {
   return (
@@ -10,6 +11,7 @@ export default function View() {
       <Routes>
         <Route path="/" element={<MainPage />} />
       </Routes>
+      <FloatButton.BackTop />
       <Pagefooter />
     </div>
   );
