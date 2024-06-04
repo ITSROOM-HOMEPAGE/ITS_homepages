@@ -9,9 +9,6 @@ export default function PageHeader() {
   console.log("qwe");
   console.log("qweqwewsdsdsdssdq");
 
-  const a = () => {
-    console.log("qwewqsdsdsdsdsasdasasdasdsdsdsdsdsdasds");
-  };
   console.log("qwewqewqewqewqwqwqfwqfw");
   return (
     <>
