@@ -6,6 +6,7 @@ export default function PageHeader() {
   //         routePath === '/about',
   // },
   // ```;
+  console.log("qwe");
   return (
     <>
       <div className="w-full flex items-center justify-center">
