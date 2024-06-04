@@ -7,6 +7,7 @@ export default function PageHeader() {
   // },
   // ```;
   console.log("qwe");
+  console.log("qweqwewq");
   return (
     <>
       <div className="w-full flex items-center justify-center">
