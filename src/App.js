@@ -3,12 +3,14 @@ import View from "./views";
 
 export default function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<View />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <html>
+      <div className="App scroll-smooth">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<View />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </html>
   );
 }

@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        mainPage2_bg: "url('./assets/mainPage2_bg.png')",
+      },
+    },
     fontFamily: {
       PretendBlack: ["Pretendard-Black"],
       PretendBold: ["Pretendard-Bold"],

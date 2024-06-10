@@ -1,19 +1,80 @@
+import { Link } from "react-router-dom";
+
 export default function Pagefooter() {
   return (
-    <div>
-      <div className="h-[300px] bg-[#161a1d] w-full text-white font-PretendMedium flex items-center justify-center">
-        <section className="w-[1300px] h-full flex flex-col justify-center min-[1600px]:ml-0 ml-[5vw]">
-          <p className="text-white text-[32px] font-PretendBold">Contact Us</p>
-          <div className="w-full border-b-[1px] border-white mt-[20px]"></div>
-          <div className="mt-[20px] text-[16px] text-[#FCFCFC]">
-            <p>GIT | github.com/MUYEONKIM</p>
-            <p className="mt-[10px]">
-              사업 및 제휴 문의 | rlaandus2@gmail.com (010-4048-7042)
-            </p>
-            <p className="mt-[30px]">2024 ©️ 김무연</p>
-          </div>
-        </section>
+    <footer class="text-gray-600 body-font">
+      <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <Link
+          class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+          to="/"
+        >
+          <img src="./logo.png" className="w-[150px]" alt="Logo" />
+        </Link>
+        <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+          © 2012 ITS space
+          <span
+            class="text-gray-600 ml-1"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            @이영규
+          </span>
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <Link
+            to="https://www.facebook.com/people/ITS_UYeG/100069847343052/"
+            class="text-gray-500"
+          >
+            <svg
+              fill="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </Link>
+          <Link
+            to="https://www.instagram.com/its_co_ltd/"
+            class="ml-3 text-gray-500"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </Link>
+          <Link
+            to="https://www.linkedin.com/company/itspaceroom/"
+            class="ml-3 text-gray-500"
+          >
+            <svg
+              fill="currentColor"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="0"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="none"
+                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+              ></path>
+              <circle cx="4" cy="4" r="2" stroke="none"></circle>
+            </svg>
+          </Link>
+        </span>
       </div>
-    </div>
+    </footer>
   );
 }

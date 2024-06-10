@@ -25,8 +25,6 @@ export default function Kakaomap() {
         new window.kakao.maps.Marker({
           position: options.center,
         }).setMap(new window.kakao.maps.Map(container, options));
-        // 마커 추가 후추수정
-        // test용
         // const marker = new window.kakao.maps.Marker({
         //   position: options.center,
         // });
@@ -41,11 +39,11 @@ export default function Kakaomap() {
         //   position: options.center,
         // });
 
-        // const infowindow = new kakao.maps.InfoWindow({
-        //   position: options.center,
-        //   content:
-        //     '<div style="padding:5px; ">Sandburg Office<br/>ITS Space</div>',
-        // });
+        const infowindow = new kakao.maps.InfoWindow({
+          position: options.center,
+          content:
+            '<div style="padding:5px; ">Sandburg Office<br/>ITS Space</div>',
+        });
         // marker.setMap(map);
         // infowindow.open(map, marker);
       });

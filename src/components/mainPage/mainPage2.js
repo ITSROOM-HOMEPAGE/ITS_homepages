@@ -1,56 +1,71 @@
+import { Card } from "antd";
+
 export default function Mainpage2() {
   return (
-    <div className="w-full flex flex-col items-center">
-      <p className="w-[620px] inline-block font-PretendBold text-[56px] leading-[80px] mt-[50px] text-center">
-        Core-Value
-      </p>
-      <p className="mt-[24px] text-[#5C5C5C] text-[26px] font-PretendSemiBold">
-        샌드버그가 지향하는 가치들을 소개합니다
-      </p>
-      <div className="w-[1300px] mt-[96px] flex justify-between flex-col items-center min-[1600px]:flex-row">
-        <div className="w-[310px] h-[670px] flex flex-col">
-          <div className="h-[600px] mt-auto">
-            <img src="./images/value1.jpg" />
-            <p className="font-PretendBold text-[24px]">본질은 시간입니다</p>
-            <p className="font-PretendBold text-[#727B88] text-[20px]">
-              시간의 가치를 누구보다 소중하게 생각하며 효율성 극대화를 통해
-              시간을 줄일 수 있도록 돕는 모든 것들을 사랑하고, 만듭니다
-            </p>
+    <div className="w-full flex flex-col items-center mt-[-30vh] bg-mainPage2_bg bg-no-repeat lg:bg-cover bg-contain ">
+      <div className="pt-[13vh] inline-block text-center text-white ">
+        <p className="inline-block font-bold text-[56px] leading-[80px] ">
+          UYeG Solution
+        </p>
+        <p className="mt-[24px] text-[20px] ">UYeG Solution의 차별화된 방식</p>
+      </div>
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div class="p-4 lg:w-1/4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100  px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <img
+                className="mb-[5vh] lg:w-[30%] md:w-[20%] w-[20%]  m-auto"
+                src="./images/proactive response.png"
+              />
+              <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                사전대응
+              </h1>
+              <p class="leading-relaxed mb-3">
+                위험 수위가 발생하기 전에 대응 가능
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="w-[310px] h-[670px] flex flex-col">
-          <div className="h-[600px] min-[1600px]:h-[650px]">
-            <img src="./images/value2.jpg" />
-            <p className="font-PretendBold text-[24px] bg-gradient-to-r from-[#7F3ADD] to-[#6264F6] text-transparent bg-clip-text">
-              데이터로 우리를 증명합니다
-            </p>
-            <p className="font-PretendBold text-[#7079CB] text-[20px]">
-              우리가 뛰어나다는 것을 증명하는 많은 수단이 있지만, 우리는
-              데이터로 그것을 증명하고데이터로 세상을 효율적으로 만들어갑니다
-            </p>
+          <div class="p-4 lg:w-1/4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100  px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <img
+                className="mb-[5vh] lg:w-[30%] md:w-[20%] w-[20%]  m-auto"
+                src="./images/Convenient.png"
+              />
+              <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                운영편리
+              </h1>
+              <p class="leading-relaxed mb-3">
+                일반근로자도 손쉽게 해석하고 대응운영 가능
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="w-[310px] h-[670px] flex flex-col">
-          <div className="h-[600px] min-[1600px]:mt-auto">
-            <img src="./images/value3.jpg" />
-            <p className="font-PretendBold text-[24px] text-[#375984]">
-              우리는 언더독입니다
-            </p>
-            <p className="font-PretendBold text-[#698AB1] text-[20px]">
-              언더독 마인드셋을 기반으로, 실패를 두려워않는 사람들을 사랑합니다
-            </p>
+          <div class="p-4 lg:w-1/4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100  px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <img
+                className="mb-[5vh] lg:w-[30%] md:w-[20%] w-[20%]  m-auto"
+                src="./images/quality.png"
+              />
+              <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                높은 품질
+              </h1>
+              <p class="leading-relaxed mb-3">
+                비용과 속도면에서 40배이상 절감효과
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="w-[310px] h-[670px] flex flex-col">
-          <div className="h-[600px] min-[1600px]:h-[650px]">
-            <img src="./images/value4.jpg" />
-            <p className="font-PretendBold text-[24px] text-[#6C3111]">
-              우리는 부적응자입니다
-            </p>
-            <p className="font-PretendBold text-[#6F6F6F] text-[20px]">
-              불편함 속에 물음을 던지고, 본질을 파헤치는 과정을 즐기고 사랑하며,
-              변화를 만들어내는 조직입니다
-            </p>
+          <div class="p-4 lg:w-1/4 md:w-1/2 w-full">
+            <div class="h-full bg-gray-100  px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+              <img
+                className="mb-[5vh] lg:w-[30%] md:w-[20%] w-[20%]  m-auto"
+                src="./images/proactive response.png"
+              />
+              <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+                적용분야
+              </h1>
+              <p class="leading-relaxed mb-3">
+                석유화학, 기계, 식품 등 산업계에 광범위하게 적용
+              </p>
+            </div>
           </div>
         </div>
       </div>

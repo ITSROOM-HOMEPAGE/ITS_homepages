@@ -1,6 +1,6 @@
 export default function Mainpage3() {
   return (
-    <div className="w-full h-[1080px] text-[#9FBAFD] flex mt-[100px]">
+    <div className="w-full h-[1080px] text-[#9FBAFD] flex ">
       <div className="w-[50%] bg-[url('./assets/page3.png')] bg-cover hidden min-[1300px]:block"></div>
       <div className="w-full min-[1300px]:w-[50%] h-full flex flex-col justify-center items-center min-[1300px]:items-start font-PretendMedium bg-[#161a1d] p-[100px]">
         <p className="font-PretendBold text-[56px] leading-[80px]">Solution</p>
