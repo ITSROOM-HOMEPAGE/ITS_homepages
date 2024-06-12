@@ -9,6 +9,10 @@ export default function View() {
       <PageHeader />
       <Routes>
         <Route path="/" element={<MainPage />} />
+        <Route path="/about" element={<MainPage />} />
+        <Route path="/product" element={<MainPage />} />
+        <Route path="/contents" element={<MainPage />} />
+        <Route path="/contact" element={<MainPage />} />
       </Routes>
       <Pagefooter />
     </div>
