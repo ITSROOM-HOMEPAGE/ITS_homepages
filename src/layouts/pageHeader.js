@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function PageHeader() {
   return (
-    <header className="w-full text-gray-600 body-font flex fixed border-b-2 bg-white">
+    <header className="w-full text-gray-600 body-font flex fixed border-b-2 bg-white z-10">
       <div className="container mx-auto flex flex-wrap p-5 flex-row justify-between ">
         <img src="./logo.png" className="w-[150px]" alt="Logo" />
 
