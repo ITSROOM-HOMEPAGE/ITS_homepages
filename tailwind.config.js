@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         mainPage2_bg: "url('./assets/mainPage2_bg.png')",
+        "custom-gradient": "linear-gradient(94deg, #57a2e3 8.29%, #6977cf 72%)",
       },
     },
     fontFamily: {
