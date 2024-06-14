@@ -3,7 +3,6 @@ import Mainpage1 from "../../components/mainPage/mainPage1";
 import Mainpage2 from "../../components/mainPage/mainPage2";
 
 export default function MainPage() {
-  console.log("qq");
   return (
     <div>
       <Mainpage0 />
