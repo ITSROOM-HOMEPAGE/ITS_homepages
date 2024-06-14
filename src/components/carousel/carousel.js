@@ -2,20 +2,18 @@ export default function Carouselcomp(props) {
   const backimgstyle = {
     backgroundImage: `url(${props.imgsrc})`,
     backgroundRepeat: "no-repeat",
-    width: "100vw",
-    height: "100vh",
     backgroundSize: "cover",
   };
 
   return (
-    <div className="flex w-[100vw] h-[100vh] relative" style={backimgstyle}>
-      <div className="w-[55%] flex flex-col justify-center items-end opacity-50 bg-black"></div>
-      <section className="absolute right-[48%] top-[40%] text-white">
-        <h2 className="font-PretendExtraBold text-4xl">
+    <div className="flex w-[100%] h-[100vh] lg:relative" style={backimgstyle}>
+      <div className="w-full flex flex-col items-center justify-center lg:w-[55%] bg-black opacity-50 animate-flip-down "></div>
+      <section className="w-auto absolute left-[10%] right-[10%] top-[35%] lg:right-[48%] lg:left-auto md:top-[40%] text-white text-center lg:text-start">
+        <h2 className="font-PretendExtraBold text-[1.5em] sm:text-4xl">
           Blood flows in your body
         </h2>
         <br />
-        <h1 className="font-PretendBold text-7xl">
+        <h1 className="font-PretendBold text-[3em] sm:text-[4.8em] leading-[1em]">
           Electricity flows <br />
           in machinery
         </h1>
@@ -26,7 +24,7 @@ export default function Carouselcomp(props) {
           ABOUT
         </button>
       </section>
-      <div className="w-[45%] flex justify-end items-center ">sd</div>
+      <div className="hidden lg:w-[45%] lg:flex lg:justify-end lg:items-center "></div>
     </div>
   );
 }

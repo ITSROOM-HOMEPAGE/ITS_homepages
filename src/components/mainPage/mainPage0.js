@@ -7,8 +7,6 @@ export default function Mainpage0() {
     height: "100vh",
     width: "100vw",
     lineHeight: "160px",
-    textAlign: "center",
-    filter: "brightness(50%)",
   };
 
   const imgsrcs = [
@@ -20,7 +18,7 @@ export default function Mainpage0() {
   ];
 
   return (
-    <Carousel autoplay arrows infinite={true}>
+    <Carousel fade={true} autoplay arrows infinite={true}>
       {imgsrcs.map((el) => (
         <div style={contentStyle}>
           <Carouselcomp imgsrc={el} />

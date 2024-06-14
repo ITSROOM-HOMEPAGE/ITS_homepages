@@ -20,5 +20,5 @@ module.exports = {
       PretendThin: ["Pretendard-Thin"],
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animated")],
 };
