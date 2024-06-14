@@ -9,6 +9,10 @@ export default function Mainpage0() {
     lineHeight: "160px",
   };
 
+  const test = {
+    test: "q",
+  };
+
   const imgsrcs = [
     "./images/carousel1.webp",
     "./images/carousel2.webp",
