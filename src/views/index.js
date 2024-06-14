@@ -3,11 +3,27 @@ import MainPage from "./main/main";
 import Pagefooter from "../layouts/pageFooter";
 import PageHeader from "../layouts/pageHeader";
 import Sidemenubar from "../components/sidemenubar/sideMenubar";
+import { useEffect, useState } from "react";
 
 export default function View() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled((curr) => !curr);
+    }
+  };
+
+  console.log(isScrolled);
+
   return (
     <div>
-      <Sidemenubar />
+      <Sidemenubar isScrolled={isScrolled} />
       <PageHeader />
       <Routes>
         <Route path="/" element={<MainPage />} />

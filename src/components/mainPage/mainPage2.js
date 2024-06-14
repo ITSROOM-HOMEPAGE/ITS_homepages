@@ -2,7 +2,7 @@ import { Card } from "antd";
 
 export default function Mainpage2() {
   return (
-    <div className="w-full mt-[-30vh]">
+    <div className="w-full mt-[-10vh]">
       <img
         src="./images/mainPage2_bg.png"
         className="linear-gradient(94deg, #57a2e3 8.29%, #6977cf 72%)"
