@@ -9,17 +9,19 @@ export default function View() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setIsScrolled((curr) => !curr);
-    }
-  };
-
-  console.log(isScrolled);
 
   return (
     <div>

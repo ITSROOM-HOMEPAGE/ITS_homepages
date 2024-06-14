@@ -4,9 +4,6 @@ import Mainpage2 from "../../components/mainPage/mainPage2";
 import Mainpage3 from "../../components/mainPage/mainPage3";
 
 export default function MainPage() {
-  console.log("qwe");
-  console.log("qwe");
-
   return (
     <div>
       <Mainpage0 />
