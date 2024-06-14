@@ -1,6 +1,6 @@
 export default function Mainpage1() {
   return (
-    <div className="h-[1500px] w-full font-PretendMedium flex justify-center items-center bg-[#3a2a68] bg-[url('./assets/main_bg.png')] bg-cover bg-fixed ">
+    <div className="h-[100vh] w-full font-PretendMedium flex justify-center items-center bg-[#3a2a68] bg-[url('./assets/main_bg.png')] bg-cover">
       <div className="h-full flex flex-col mt-[90vh] w-[1500px] items-center min-[1500px]:items-start">
         <div className="flex flex-col min-[1500px]:items-start items-center text-black animate-fadeInUp">
           <p className="inline-block mt-[3vh] text-[#133aa5] text-[56px] leading-[80px] font-PretendBold ">

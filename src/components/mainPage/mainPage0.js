@@ -1,4 +1,5 @@
 import { Carousel } from "antd";
+import Carouselcomp from "../carousel/carousel";
 
 export default function Mainpage0() {
   const contentStyle = {
@@ -10,23 +11,21 @@ export default function Mainpage0() {
     filter: "brightness(50%)",
   };
 
+  const imgsrcs = [
+    "./images/carousel1.webp",
+    "./images/carousel2.webp",
+    "./images/carousel3.webp",
+    "./images/carousel4.webp",
+    "./images/carousel5.webp",
+  ];
+
   return (
     <Carousel autoplay arrows infinite={true}>
-      <div>
-        <img src="./images/carousel1.webp" style={contentStyle} />
-      </div>
-      <div>
-        <img src="./images/carousel2.webp" style={contentStyle} />
-      </div>
-      <div>
-        <img src="./images/carousel3.webp" style={contentStyle} />
-      </div>
-      <div>
-        <img src="./images/carousel4.webp" style={contentStyle} />
-      </div>
-      <div>
-        <img src="./images/carousel5.webp" style={contentStyle} />
-      </div>
+      {imgsrcs.map((el) => (
+        <div style={contentStyle}>
+          <Carouselcomp imgsrc={el} />
+        </div>
+      ))}
     </Carousel>
   );
 }

@@ -2,13 +2,12 @@ import { Card } from "antd";
 
 export default function Mainpage2() {
   return (
-    <div className="w-full mt-[-30vh]">
-      <img src="./images/mainPage2_bg.png" />
-      {/* <div className="bg-gradient-to-r from-[#57A2E3] to-[#6977CF]">
-        <div className="border-b-transparent  border-l-[50vw] border-r-[50vw] border-b-[20vh]" />
-      </div> */}
-      {/* <div className="w-full flex flex-col items-center mt-[-30vh] bg-mainPage2_bg bg-no-repeat bg-cover"> */}
-      <div className=" flex flex-col items-center bg-gradient-to-r from-[#57A2E3] to-[#6977CF] ">
+    <div className="w-full mt-[-10vh]">
+      <img
+        src="./images/mainPage2_bg.png"
+        className="linear-gradient(94deg, #57a2e3 8.29%, #6977cf 72%)"
+      />
+      <div className=" flex flex-col items-center bg-custom-gradient ">
         <div className="inline-block text-center text-white">
           <p className="inline-block font-bold text-[56px] leading-[80px] ">
             UYeG Solution
