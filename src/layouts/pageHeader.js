@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Drawercomp from "../components/drawer/drawer";
 
 export default function PageHeader() {
   const HeaderStyled =
@@ -27,6 +28,9 @@ export default function PageHeader() {
       <Link className="hidden sm:block cursor-pointer hover:text-[#4E43ED] p-5">
         🌐
       </Link>
+      <div className="p-5 sm:hidden">
+        <Drawercomp />
+      </div>
     </header>
   );
 }
