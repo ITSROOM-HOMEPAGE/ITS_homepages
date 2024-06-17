@@ -1,8 +1,45 @@
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
 export default function Mainpage1() {
+  const imgRef = useRef(null);
+  const [isImgVisible, setIsImgVisible] = useState(false);
+
+  useEffect(() => {
+    const observerOptions = {
+      rootMargin: "0px 0px -200px 0px",
+    };
+
+    const imgObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsImgVisible(true);
+          imgObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    if (imgRef.current) {
+      imgObserver.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        imgObserver.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="container px-5 py-24 mb-24 mx-auto flex flex-wrap">
       <div className="flex flex-wrap w-full">
-        <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+        <motion.div
+          ref={imgRef}
+          initial={{ opacity: 0, x: -100 }}
+          animate={isImgVisible ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6"
+        >
           <p className="inline-block font-GiantsBold text-[56px] text-sky-100 leading-[80px] ">
             Technology
           </p>
@@ -117,8 +154,12 @@ export default function Mainpage1() {
               </p>
             </div>
           </div>
-        </div>
-        <img
+        </motion.div>
+        <motion.img
+          ref={imgRef}
+          initial={{ opacity: 0, x: 100 }}
+          animate={isImgVisible ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 1, ease: "easeOut" }}
           className="lg:w-3/5 md:w-1/2  object-cover object-center rounded-lg md:mt-0 mt-12 "
           src="./images/test4.svg"
           alt="step"
