@@ -23,8 +23,8 @@ export default function Mainpage0() {
 
   return (
     <Carousel fade={true} autoplay arrows infinite={true}>
-      {imgsrcs.map((el) => (
-        <div style={contentStyle}>
+      {imgsrcs.map((el, index) => (
+        <div key={index} style={contentStyle}>
           <Carouselcomp imgsrc={el} />
         </div>
       ))}
