@@ -9,6 +9,10 @@ export default function Mainpage0() {
     lineHeight: "160px",
   };
 
+  const test = {
+    test: "q",
+  };
+
   const imgsrcs = [
     "./images/carousel1.webp",
     "./images/carousel2.webp",
@@ -19,8 +23,8 @@ export default function Mainpage0() {
 
   return (
     <Carousel fade={true} autoplay arrows infinite={true}>
-      {imgsrcs.map((el) => (
-        <div style={contentStyle}>
+      {imgsrcs.map((el, index) => (
+        <div key={index} style={contentStyle}>
           <Carouselcomp imgsrc={el} />
         </div>
       ))}

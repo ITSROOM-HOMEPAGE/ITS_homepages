@@ -1,9 +1,8 @@
-import { QuestionCircleOutlined, SyncOutlined } from "@ant-design/icons";
 import { FloatButton } from "antd";
 import { Link } from "react-router-dom";
 
 export default function Sidemenubar(props) {
-  const imgbtnStyled = "hidden sm:block w-[150px]";
+  const imgbtnStyled = "hidden sm:block w-[150px] hover:scale-110 duration-300";
 
   return (
     <FloatButton.Group
@@ -23,7 +22,10 @@ export default function Sidemenubar(props) {
         <img src="./icon/youtube.png" className={`${imgbtnStyled}`} />
       </Link>
       {props.isScrolled ? (
-        <FloatButton.BackTop visibilityHeight={0} className="animate-fade" />
+        <FloatButton.BackTop
+          visibilityHeight={0}
+          className="animate-fade hover:scale-110 duration-300"
+        />
       ) : (
         <FloatButton className="opacity-0" />
       )}

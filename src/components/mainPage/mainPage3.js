@@ -1,12 +1,53 @@
+import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
 export default function Mainpage3() {
+  const imgRef = useRef(null);
+  const [isImgVisible, setIsImgVisible] = useState(false);
+
+  useEffect(() => {
+    const observerOptions = {
+      rootMargin: "0px 0px -200px 0px",
+    };
+
+    const imgObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsImgVisible(true);
+          imgObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    if (imgRef.current) {
+      imgObserver.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        imgObserver.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div class="container mx-auto flex px-5 py-24 lg:mt-24 md:flex-row flex-col items-center">
-      <img
-        className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 "
+    <div class="container mx-auto flex flex-col px-5 py-24 lg:flex-row mt-24  md: flex-col items-center">
+      <motion.img
+        ref={imgRef}
+        initial={{ opacity: 0, x: -100 }}
+        animate={isImgVisible ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="lg:w-3/5 md:object-cover object-center rounded-lg mt-0 mt-12 "
         src="./images/test02.png"
         alt="model"
       />
-      <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+      <motion.div
+        ref={imgRef}
+        initial={{ opacity: 0, x: 100 }}
+        animate={isImgVisible ? { opacity: 1, x: 0 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="items-center text-center pl-0 lg:flex-grow lg:pl-24 md:flex flex-col mt-10 md:items-start md:text-left"
+      >
         <p className="inline-block font-GiantsBold text-[56px] text-sky-100 leading-[80px] ">
           LUDA & UYeG
         </p>
@@ -15,7 +56,7 @@ export default function Mainpage3() {
         </p>
         <div class="flex w-full mb-4">
           <div class="w-full ">
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col hover:bg-custom-gradient hover:text-white">
+            <div class="flex items-center border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col hover:bg-custom-gradient hover:text-white">
               <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
                 <svg
                   fill="none"
@@ -31,7 +72,7 @@ export default function Mainpage3() {
               </div>
               <div class="flex-grow">
                 <h2 class="linear-gradienttext-gray-900 text-lg font-bold mb-3">
-                  LUDA
+                  LUDA (Software)
                 </h2>
                 <p class="leading-relaxed text-base">
                   전류 BIG DATA 분석 기반의 설비 예지보전 및 안전 융합 SOLUTION
@@ -56,7 +97,7 @@ export default function Mainpage3() {
         </div>
         <div class="flex w-full">
           <div class="w-full">
-            <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div class="flex items-center border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col hover:bg-custom-gradient hover:text-white">
               <div class="w-16 h-16 sm:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
                 <svg
                   fill="none"
@@ -71,7 +112,9 @@ export default function Mainpage3() {
                 </svg>
               </div>
               <div class="flex-grow">
-                <h2 class="text-gray-900 text-lg font-bold mb-3">UYeG</h2>
+                <h2 class="text-gray-900 text-lg font-bold mb-3">
+                  UYeG(Hardware)
+                </h2>
                 <p class="leading-relaxed text-base">
                   Smart-IoT sensor (SAMRT EOCR®)을 적용하여 설비의 전류,전압
                   Data를 수집
@@ -94,7 +137,7 @@ export default function Mainpage3() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
