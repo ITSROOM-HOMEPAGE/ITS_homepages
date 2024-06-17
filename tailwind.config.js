@@ -18,6 +18,8 @@ module.exports = {
       PretendRegular: ["Pretendard-Regular"],
       PretendSemiBold: ["Pretendard-SemiBold"],
       PretendThin: ["Pretendard-Thin"],
+      GasoekOne: ["GasoekOne-Regular"],
+      GiantsBold: ["Giants-Bold"],
     },
   },
   plugins: [require("tailwindcss-animated")],

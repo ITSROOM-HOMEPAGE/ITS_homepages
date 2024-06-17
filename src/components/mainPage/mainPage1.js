@@ -1,8 +1,14 @@
 export default function Mainpage1() {
   return (
-    <div className="container px-5 py-24 mx-auto flex flex-wrap">
+    <div className="container px-5 py-24 mb-24 mx-auto flex flex-wrap">
       <div className="flex flex-wrap w-full">
         <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+          <p className="inline-block font-GiantsBold text-[56px] text-sky-100 leading-[80px] ">
+            Technology
+          </p>
+          <p className="mt-3 text-[20px] mb-24">
+            아이티공간과 함께 더 똑똑하고 안전하게 사용하세요!
+          </p>
           <div className="flex relative pb-12">
             <div className="h-full w-10 absolute inset-0 flex items-center justify-center">
               <div className="h-full w-1 bg-gray-200 pointer-events-none"></div>
@@ -75,11 +81,11 @@ export default function Mainpage1() {
             </div>
             <div className="flex-grow pl-4">
               <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                STEP 3
+                합리적인 가격과 품질
               </h2>
               <p className="leading-relaxed">
-                Coloring book nar whal glossier master cleanse umami. Salvia +1
-                master cleanse blog taiyaki.
+                전류, 전압 뿐만 아니라 온습도, 진폭 등 통합적인 모니터링이
+                가능합니다.
               </p>
             </div>
           </div>
@@ -103,18 +109,18 @@ export default function Mainpage1() {
             </div>
             <div className="flex-grow pl-4">
               <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
-                STEP 4
+                유연한 적용
               </h2>
               <p className="leading-relaxed">
-                VHS cornhole pop-up, try-hard 8-bit iceland helvetica. Kinfolk
-                bespoke try-hard cliche palo santo offal.
+                석유화학, 기계, 식품 등 산업계의 어떤 설비에도 광범위하게 적용
+                할 수 있습니다.
               </p>
             </div>
           </div>
         </div>
         <img
-          className="lg:w-3/5 md:w-1/2 sm:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
-          src="./images/test3.svg"
+          className="lg:w-3/5 md:w-1/2  object-cover object-center rounded-lg md:mt-0 mt-12 "
+          src="./images/test4.svg"
           alt="step"
         />
       </div>
