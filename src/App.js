@@ -7,7 +7,7 @@ export default function App() {
       <div className="App scroll-smooth">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<View />} />
+            <Route path="/*" element={<View />} />
           </Routes>
         </BrowserRouter>
       </div>

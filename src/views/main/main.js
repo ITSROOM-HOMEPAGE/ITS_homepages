@@ -3,7 +3,7 @@ import Mainpage1 from "../../components/mainPage/mainPage1";
 import Mainpage2 from "../../components/mainPage/mainPage2";
 import Mainpage3 from "../../components/mainPage/mainPage3";
 
-export default function MainPage() {
+export default function Mainview() {
   return (
     <div>
       <Mainpage0 />

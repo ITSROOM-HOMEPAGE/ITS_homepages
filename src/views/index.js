@@ -1,9 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import MainPage from "./main/main";
+import { useEffect, useState } from "react";
+import Mainview from "./main/main";
 import Pagefooter from "../layouts/pageFooter";
 import PageHeader from "../layouts/pageHeader";
 import Sidemenubar from "../components/sidemenubar/sideMenubar";
-import { useEffect, useState } from "react";
+import Aboutview from "./about/about";
+import Productview from "./product/product";
+import Contentsview from "./contents/contents";
+import Contactview from "./contact/contact";
 
 export default function View() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,11 +32,11 @@ export default function View() {
       <Sidemenubar isScrolled={isScrolled} />
       <PageHeader />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/about" element={<MainPage />} />
-        <Route path="/product" element={<MainPage />} />
-        <Route path="/contents" element={<MainPage />} />
-        <Route path="/contact" element={<MainPage />} />
+        <Route path="/" element={<Mainview />} />
+        <Route path="/about" element={<Aboutview />} />
+        <Route path="/product" element={<Productview />} />
+        <Route path="/contents" element={<Contentsview />} />
+        <Route path="/contact" element={<Contactview />} />
       </Routes>
       <Pagefooter />
     </div>
