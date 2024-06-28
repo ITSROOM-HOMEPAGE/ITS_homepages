@@ -64,7 +64,7 @@ export default function Mainpage1() {
               </svg>
             </div>
             <div className="flex-grow pl-4">
-              <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              <h2 className="mb-1 text-md font-bold font text-gray-900 tracking-wider">
                 사전대응
               </h2>
               <p className="leading-relaxed">
@@ -90,7 +90,7 @@ export default function Mainpage1() {
               </svg>
             </div>
             <div className="flex-grow pl-4">
-              <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              <h2 className="mb-1 text-md font-bold font text-gray-900 tracking-wider">
                 편리한 운영
               </h2>
               <p className="leading-relaxed">
@@ -117,7 +117,7 @@ export default function Mainpage1() {
               </svg>
             </div>
             <div className="flex-grow pl-4">
-              <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              <h2 className="mb-1 text-md font-bold font text-gray-900 tracking-wider">
                 합리적인 가격과 품질
               </h2>
               <p className="leading-relaxed">
@@ -145,7 +145,7 @@ export default function Mainpage1() {
               </svg>
             </div>
             <div className="flex-grow pl-4">
-              <h2 className="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+              <h2 className="mb-1 text-md font-bold font text-gray-900 tracking-wider">
                 유연한 적용
               </h2>
               <p className="leading-relaxed">
@@ -160,7 +160,7 @@ export default function Mainpage1() {
           initial={{ opacity: 0, x: 100 }}
           animate={isImgVisible ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="lg:w-3/5 md:w-1/2  object-cover object-center rounded-lg md:mt-0 mt-12 "
+          className="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 "
           src="./images/test4.svg"
           alt="step"
         />
